@@ -88,11 +88,7 @@ sudo apt-get -y install cuda
 ```sh
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
-```
-
-4. Run `source ~/.bashrc` to add conda to your PATH.
-
-```
+source ~/.bashrc
 conda create --name tf python=3.9
 conda deactivate
 conda activate tf
