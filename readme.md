@@ -88,6 +88,11 @@ sudo apt-get -y install cuda
 ```sh
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+4. Run `source ~/.bashrc` to add conda to your PATH.
+
+```
 conda create --name tf python=3.9
 conda deactivate
 conda activate tf
@@ -99,8 +104,8 @@ pip install --upgrade pip
 pip install tensorflow
 ```
 
-4. Verify the tensorflow installation by running `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"` in your WSL instance.
-5. For more information visit [this website](https://www.tensorflow.org/install/pip/).
+5. Verify the tensorflow installation by running `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"` in your WSL instance.
+6. For more information visit [this website](https://www.tensorflow.org/install/pip/).
 
 # Usage
 1. Open your favorite terminal.
