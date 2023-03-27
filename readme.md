@@ -133,7 +133,7 @@ echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
 ```
 
-# Configure jupyter using the following settings
+# Usage
 
 1. Run `wsl` to enter your Ubuntu WSL instance.
 2. Run the following commands to start your Jupyter server:
