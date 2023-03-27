@@ -112,16 +112,20 @@ pip install --upgrade pip
 pip install tensorflow==2.12.*
 ```
 
-5. Verify the tensorflow installation by running `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"` in your WSL instance.
-6. For more information visit [this website](https://www.tensorflow.org/install/pip/).
+4. Verify the tensorflow installation by running `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"` in your WSL instance.
+5. For more information visit [this website](https://www.tensorflow.org/install/pip/).
 
 ## Jupyter
 
-TODO: ADD DOCUMENTATION HERE
+1. Open your favorite terminal
+2. Run `wsl --setdefault Ubuntu` to set your Ubuntu instance as your default WSL instance.
+3. Run `wsl` to enter the Ubuntu instance.
+4. Run the following commands to setup your Jupyter server:
 
 ```
+conda activate tf
+pip install jupyter
 jupyter notebook --generate-config
-# Configure jupyter using the following settings
 echo "c.NotebookApp.token = 'secret'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.password = ''" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
@@ -129,28 +133,20 @@ echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
 ```
 
-```
-wsl --setdefault Ubuntu
-wsl
-```
+# Configure jupyter using the following settings
+
+1. Run `wsl` to enter your Ubuntu WSL instance.
+2. Run the following commands to start your Jupyter server:
 
 ```
 conda activate tf
 jupyter notebook --notebook-dir=/mnt/c/Users/pengu.sparky/Documents/code/python/tensorflow
 ```
 
-# Usage (deprecated)
-
-1. Open your favorite terminal.
-2. Enter `wsl` to enter your Ubuntu instance.
-3. Run `conda activate tf` to activate the Tensorflow conda environment.
-4. Run `pip install jupyter` to install Jupyter.
-5. Run `jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root` to start your Jupyter notebook server.
-6. Copy the url that is given (e.g. `http://127.0.0.1:8888?token=asfg8976ah8b7sd8`).
-7. Open Visual Studio Code
-8. Open a Jupyter Notebook in Visual Studio Code (make sure you have the Python and Jupyter extensions installed).
-9. Click on `Select Kernel` on the top-right side of the notebook.
-10. Click on `Select Another Kernel...`
-11. Click on `Existing Jupyter Server...`
-12. Click on `Enter the URL of the running Jupyter server`
-13. Paste the url that you have copied previously and press Enter.
+3. Open Visual Studio Code
+4. Open a Jupyter Notebook in Visual Studio Code (make sure you have the Python and Jupyter extensions installed).
+5. Click on `Select Kernel` on the top-right side of the notebook.
+6. Click on `Select Another Kernel...`
+7. Click on `Existing Jupyter Server...`
+8. Click on `Enter the URL of the running Jupyter server`
+9. Copy and paste the following url: `http://localhost?token=secret` and press Enter.
