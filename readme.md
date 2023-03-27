@@ -1,13 +1,16 @@
 # Tensorflow 2 - Windows with WSL installation
 
 ## Windows
+
 1. Install any Windows updates that you might have.
 
 ## NVIDIA drivers
+
 1. Visit [this link](https://www.nvidia.com/drivers) or open Geforce Experience.
 2. Update your drivers to the latest version.
 
 ## NVIDIA CUDA Toolkit
+
 1. Visit [this link](https://developer.nvidia.com/cuda-downloads) to find the latest download of CUDA Toolkit.
 2. Install the latest CUDA Toolkit using the installer.
 3. Add the following to the system path environment variable ([click here](https://www.howtogeek.com/787217/how-to-edit-environment-variables-on-windows-10-or-11/) for more information).:
@@ -18,6 +21,7 @@
 4. Visit [this link](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) for more information about the installation of CUDA Toolkit.
 
 ## Zlib
+
 1. Visit [this link](https://www.winimage.com/zLibDll/) to find the latest zLib downloads.
 2. Right click the `pre-built zlib DLL` download link for `AMD64/Intel EM64T`, and select `Save link as..` to save the zip file to your computer.
 3. Extract the zip file. The folder should contain a `dll_x64` and `static_x64` directory.
@@ -29,6 +33,7 @@
 9. Add the `dll_x64` directory to your system path environment variable ([click here](https://www.howtogeek.com/787217/how-to-edit-environment-variables-on-windows-10-or-11/) for more information).
 
 ## cuDNN SDK
+
 1. Visit [this link](https://developer.nvidia.com/rdp/cudnn-download) to find the latest cuDNN download.
 2. You will have to create an account in order to download this.
 3. Once you are logged in download the latest Windows zip file.
@@ -45,6 +50,7 @@
 10. Visit [this link](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html) for more information about the cuDNN SDK installation.
 
 ## Python
+
 1. Visit [this link](https://www.python.org/downloads/windows/) to view Python downloads for Windows.
 2. Download the Python 3.10.x installer (just select the most recent one).
 3. Run the installer and make sure to use the checkbox to add Python to your PATH.
@@ -52,6 +58,7 @@
 5. Run `pip install --upgrade pip` to update pip to the latest version.
 
 ## WSL
+
 1. Make sure you are running Windows 11.
 2. Open your favorite terminal.
 3. Run `wsl --shutdown` to stop all WSL instances.
@@ -82,6 +89,7 @@ sudo apt-get -y install cuda
 ```
 
 ## Miniconda & Tensorflow
+
 1. Open your favorite terminal.
 2. Run `wsl` to enter your Ubuntu instance.
 3. Copy and paste the following commands into your WSL instance to install Miniconda and Tensorflow:
@@ -107,7 +115,32 @@ pip install tensorflow==2.12.*
 5. Verify the tensorflow installation by running `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"` in your WSL instance.
 6. For more information visit [this website](https://www.tensorflow.org/install/pip/).
 
-# Usage
+## Jupyter
+
+TODO: ADD DOCUMENTATION HERE
+
+```
+jupyter notebook --generate-config
+# Configure jupyter using the following settings
+echo "c.NotebookApp.token = 'secret'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.password = ''" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
+```
+
+```
+wsl --setdefault Ubuntu
+wsl
+```
+
+```
+conda activate tf
+jupyter notebook --notebook-dir=/mnt/c/Users/pengu.sparky/Documents/code/python/tensorflow
+```
+
+# Usage (deprecated)
+
 1. Open your favorite terminal.
 2. Enter `wsl` to enter your Ubuntu instance.
 3. Run `conda activate tf` to activate the Tensorflow conda environment.
