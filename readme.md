@@ -126,11 +126,7 @@ pip install tensorflow==2.12.*
 conda activate tf
 pip install jupyter
 jupyter notebook --generate-config
-echo "c.NotebookApp.token = 'secret'" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.password = ''" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
+printf "c.NotebookApp.token = 'secret'\nc.NotebookApp.password = ''\nc.NotebookApp.open_browser = False\nc.NotebookApp.ip = '0.0.0.0'\nc.NotebookApp.port = 8888\n" >> ~/.jupyter/jupyter_notebook_config.py
 ```
 
 ## Usage
