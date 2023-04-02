@@ -18,6 +18,8 @@
     - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\extras\CUPTI\lib64`
     - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\include`
     - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp`
+    - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\extras\CUPTI\lib64`
+    - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\include`
 4. Visit [this link](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) for more information about the installation of CUDA Toolkit.
 
 ## Zlib
