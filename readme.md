@@ -148,4 +148,4 @@ jupyter notebook --notebook-dir='/mnt/c/Users/YOUR_USERNAME/Documents/code/pytho
 6. Click on `Select Another Kernel...`
 7. Click on `Existing Jupyter Server...`
 8. Click on `Enter the URL of the running Jupyter server`
-9. Copy and paste the following url: `http://localhost?token=secret` and press Enter.
+9. Copy and paste the following url: `http://localhost:8888?token=secret` and press Enter.
