@@ -139,7 +139,7 @@ printf "c.NotebookApp.token = 'secret'\nc.NotebookApp.password = ''\nc.NotebookA
 ```
 conda activate tf
 # Replace YOUR_USERNAME with your own.
-jupyter notebook --notebook-dir=/mnt/c/Users/YOUR_USERNAME/Documents/code/python/tensorflow
+jupyter notebook --notebook-dir='/mnt/c/Users/YOUR_USERNAME/Documents/code/python/tensorflow'
 ```
 
 3. Open Visual Studio Code
