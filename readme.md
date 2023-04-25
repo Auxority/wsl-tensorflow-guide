@@ -70,6 +70,7 @@
 wsl --shutdown
 wsl -l | tail -n +2 | awk '{print $1}' | xargs -I {} wsl --unregister {}
 wsl --install
+wsl --update
 ```
 
 7. Open your favorite terminal.
