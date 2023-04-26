@@ -60,7 +60,7 @@
 ## WSL
 
 1. Make sure you are running Windows 11.
-2. Open a bash terminal.
+2. Open your favorite terminal.
 3. Run `wsl --shutdown` to stop all WSL instances.
 4. Run `wsl -l | tail -n +2 | awk '{print $1}' | xargs -I {} wsl --unregister {}` to delete all your WSL instances.
 5. Run `wsl --install` to install WSL2 if this has not been installed.
