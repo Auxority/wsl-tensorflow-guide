@@ -1,5 +1,9 @@
 # Tensorflow 2 - Windows with WSL installation
 
+## Important
+
+Save yourself from pain and just do this: https://github.com/Auxority/tensorflow-jupyter
+
 ## Windows
 
 1. Install any Windows updates that you might have.
